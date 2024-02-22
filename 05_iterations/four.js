@@ -18,21 +18,21 @@
 
 // coding.forEach(printMe)
 
-const myCoding = [
-    {
-        languageName: "Javascript",
-        languageFile: "js"
-    },
-    {
-        languageName: "java",
-        languageFile: "java"
-    },
-    {
-        languageName: "python",
-        languageFile: "py"
-    }
-]
+// const myCoding = [
+//     {
+//         languageName: "Javascript",
+//         languageFile: "js"
+//     },
+//     {
+//         languageName: "java",
+//         languageFile: "java"
+//     },
+//     {
+//         languageName: "python",
+//         languageFile: "py"
+//     }
+// ]
 
-myCoding.forEach((item) => {
-    console.log(item.languageName);
-})
+// myCoding.forEach((item) => {
+//     console.log(item.languageName);
+// })
