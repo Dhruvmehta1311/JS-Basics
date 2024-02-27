@@ -1,22 +1,20 @@
 const body = document.querySelector("body")
 const buttons = document.querySelectorAll(".button")
 
+// console.log(buttons);
+
 buttons.forEach((button)=>{
     // console.log(button);
-
-    button.addEventListener("click", (clickEvent)=>{
-        console.log(clickEvent);
-        console.log(clickEvent.target.id);
-
-        if (clickEvent.target.id === clickEvent.target.id) {
-            body.style.backgroundColor = clickEvent.target.id           
+    
+    button.addEventListener("click", (e)=>{
+        // console.log(e);
+        // console.log(e.target.className);
+        // console.log(e.target.id);
+        if (e.target.id === e.target.id) {
+            body.style.backgroundColor = e.target.id
         }
-
-
     })
-
 })
-
 
 
 
