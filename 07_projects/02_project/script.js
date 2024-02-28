@@ -18,7 +18,7 @@ form.addEventListener("submit", (e)=>{
         results.innerHTML = `<br><span>Enter a Valid Weight.</span>`
     }
     else{
-        results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
+        results.innerHTML = `<br><span>Your BMI is : ${bmi}</span>`
     }
     
     const message = document.querySelector("#message")
