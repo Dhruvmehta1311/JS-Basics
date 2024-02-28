@@ -11,15 +11,16 @@ form.addEventListener("submit", (e)=>{
     const result = document.querySelector("#results")
     const bmi = (weight / ((height*height)/10000)).toFixed(2)
 
-    if(height == "" || height <= 0 || isNaN(height)){
-        result.innerHTML = "<br><span>Kindly Enter Valid Height.</span>"
+    if (height === "" || height <=0 || isNaN(height)) {
+        results.innerHTML = `<br><span>Enter a Valid Height.</span>`
     }
-    if(weight == "" || weight <= 0 || isNaN(weight)){
-        result.innerHTML = "<br><span>Kindly Enter Valid Weight</span>"
+    else if (weight === "" || weight <= 0 || isNaN(weight)) {
+        results.innerHTML = `<br><span>Enter a Valid Weight.</span>`
     }
     else{
-        result.innerHTML = `<br> <span>Your BMI is : ${bmi}</span>`
-
+        results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
+    }
+    
     const message = document.querySelector("#message")
 
     if(bmi <= 18.6){
@@ -28,53 +29,13 @@ form.addEventListener("submit", (e)=>{
     else if(bmi > 18.6 && bmi <= 24.9){
         message.innerHTML = "Note : Your BMI Suggests that your weight is normal.<br> Keep up the good work."
     }
-    else{
+    else if(bmi > 24.9){
         message.innerHTML = "Note : Your BMI Suggests that you are Overweight,<br> Kindly work on it"
     }
-    }
-
     
 
-    
-
-    
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -91,15 +52,15 @@ form.addEventListener("submit", (e)=>{
 
 //     const bmi = (weight / ((height*height)/10000)).toFixed(2)
 
-//     if (height === "" || height <=0 || isNaN(height)) {
-//         results.innerHTML = `<span>Enter a Valid Height.</span>`
-//     }
-//     else if (weight === "" || weight <= 0 || isNaN(weight)) {
-//         results.innerHTML = `<span>Enter a Valid Weight.</span>`
-//     }
-//     else{
-//         results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
-//     }
+    // if (height === "" || height <=0 || isNaN(height)) {
+    //     results.innerHTML = `<span>Enter a Valid Height.</span>`
+    // }
+    // else if (weight === "" || weight <= 0 || isNaN(weight)) {
+    //     results.innerHTML = `<span>Enter a Valid Weight.</span>`
+    // }
+    // else{
+    //     results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
+    // }
     
 //     const messages = document.querySelector("#message")
 
