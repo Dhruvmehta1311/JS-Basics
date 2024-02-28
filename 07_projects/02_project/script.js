@@ -17,13 +17,13 @@ form.addEventListener("submit", (e)=>{
     const message = document.querySelector("#message")
 
     if(bmi <= 18.6){
-        message.innerHTML = "Your BMI Suggests that you are Underweight kindly work on it."
+        message.innerHTML = "Note : Your BMI Suggests that you are Underweight kindly work on it."
     }
     else if(bmi > 18.6 && bmi <= 24.9){
-        message.innerHTML = "Your BMI Suggests that your weight is normal. Keep up the good work."
+        message.innerHTML = "Note : Your BMI Suggests that your weight is normal. Keep up the good work."
     }
     else{
-        message.innerHTML = "Your BMI Suggests that you are Overweight, kindly work on it,"
+        message.innerHTML = "Note : Your BMI Suggests that you are Overweight, kindly work on it,"
     }
 
 })
