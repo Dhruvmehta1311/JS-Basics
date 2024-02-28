@@ -1,37 +1,30 @@
 const form = document.querySelector("form")
 
-form.addEventListener('submit', (e)=>{
+form.addEventListener("submit", (e)=>{
     e.preventDefault()
+    // console.log(e);
 
     const height = parseInt(document.querySelector("#height").value)
     const weight = parseInt(document.querySelector("#weight").value)
-
-    const results = document.querySelector("#results")
+    // console.log(typeof(height));
 
     const bmi = (weight / ((height*height)/10000)).toFixed(2)
 
-    if (height === "" || height <=0 || isNaN(height)) {
-        results.innerHTML = `<span>Enter a Valid Height.</span>`
+    const result = document.querySelector("#results")
+
+    result.innerHTML = `<br> <span>Your BMI is : ${bmi}</span>`
+
+    const message = document.querySelector("#message")
+
+    if(bmi <= 18.6){
+        message.innerHTML = "Your BMI Suggests that you are Underweight kindly work on it."
     }
-    else if (weight === "" || weight <= 0 || isNaN(weight)) {
-        results.innerHTML = `<span>Enter a Valid Weight.</span>`
+    else if(bmi > 18.6 && bmi <= 24.9){
+        message.innerHTML = "Your BMI Suggests that your weight is normal. Keep up the good work."
     }
     else{
-        results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
+        message.innerHTML = "Your BMI Suggests that you are Overweight, kindly work on it,"
     }
-    
-    const messages = document.querySelector("#message")
-
-    if(bmi < 18.6){
-        messages.innerHTML = `<span>You are Over Weight</span>`
-    }
-    else if(bmi >= 18.6 && bmi <= 24.9 ){
-        messages.innerHTML = `<span>You are Normal</span>`
-    }
-    else{
-        messages.innerHTML = `<span>You are Overweight. Please Work on it.</span>`
-    }
-
 
 })
 
@@ -55,6 +48,60 @@ form.addEventListener('submit', (e)=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const form = document.querySelector("form")
+
+// form.addEventListener('submit', (e)=>{
+//     e.preventDefault()
+
+//     const height = parseInt(document.querySelector("#height").value)
+//     const weight = parseInt(document.querySelector("#weight").value)
+
+//     const results = document.querySelector("#results")
+
+//     const bmi = (weight / ((height*height)/10000)).toFixed(2)
+
+//     if (height === "" || height <=0 || isNaN(height)) {
+//         results.innerHTML = `<span>Enter a Valid Height.</span>`
+//     }
+//     else if (weight === "" || weight <= 0 || isNaN(weight)) {
+//         results.innerHTML = `<span>Enter a Valid Weight.</span>`
+//     }
+//     else{
+//         results.innerHTML = `<span>Your BMI is : ${bmi}</span>`
+//     }
+    
+//     const messages = document.querySelector("#message")
+
+//     if(bmi < 18.6){
+//         messages.innerHTML = `<span>You are Over Weight</span>`
+//     }
+//     else if(bmi >= 18.6 && bmi <= 24.9 ){
+//         messages.innerHTML = `<span>You are Normal</span>`
+//     }
+//     else{
+//         messages.innerHTML = `<span>You are Overweight. Please Work on it.</span>`
+//     }
+
+
+// })
 
 
 
