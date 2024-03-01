@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous JS</h1>
+    <button style="padding: 1rem 3rem;" id="stop">Stop</button>
+</body>
+<script>
+
+    const myTimeout = ()=>{
+        console.log("Dhruv");
+    }
+
+    const changeText = ()=>{
+        document.querySelector("h1").innerHTML = "JS with Dhruv"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector("#stop").addEventListener('click', ()=>{
+        clearTimeout(changeMe)
+    })
+
+
+    setTimeout(myTimeout, 3000)
+
+    // const myInterval = ()=>{
+    //     console.log("Dhruv");
+    // }
+
+    // setInterval(myInterval, 3000)
+</script>
+</html>
