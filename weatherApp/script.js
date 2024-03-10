@@ -6,9 +6,6 @@ const cityTime = document.querySelector("#cityTime")
 const cityTemp = document.querySelector("#cityTemp")
 
 
-
-
-
 async function getData(cityName){
     const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=bb67028a000e4415a29152611240703&q=${cityName}&aqi=yes`);
     return await promise.json();
