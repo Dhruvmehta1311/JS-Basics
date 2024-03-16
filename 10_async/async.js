@@ -93,8 +93,10 @@ async function apiData(user){
     const url = `https://api.github.com/users/${user}`
     const getData = await fetch(url)
     const readData = await getData.json();
+    console.log(readData);
     console.log(readData.login);
     console.log(readData.company);
+    console.log(readData.bio);
 
 }
 
